@@ -1,0 +1,160 @@
+@use 'colors' as *;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Space Mono', monospace;
+	font-size: 1rem;
+	background-color: $white;
+	overflow-x: hidden;
+}
+
+// HEADER
+
+.header {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-content: start;
+	position: relative;
+
+	&__title {
+		margin: 10rem;
+	}
+
+	&__h1 {
+		font-size: 8rem;
+	}
+
+	&__h3 {
+		font-size: 4rem;
+	}
+
+	&__span {
+		color: $orange;
+	}
+
+	&__img {
+		flex-shrink: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	&__shadow {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 4rem;
+		font-size: 5rem;
+		cursor: pointer;
+		animation-name: iconAnimation;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		z-index: 5;
+		transition: left 0.4s, color 0.4s;
+
+		&:hover {
+			color: $grey;
+		}
+	}
+}
+
+.box {
+	&__left {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__right {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+}
+
+.logo {
+	&__img {
+		margin-right: 5rem;
+		width: 400px;
+	}
+}
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-103%);
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: transform 0.4s;
+}
+
+.show-modal {
+	transform: translateX(0);
+}
+
+.show-modal-icon {
+	color: $orange;
+	animation-name: iconAnimationShowModal;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transform: rotate(180deg);
+}
+
+// MAIN
+
+.about {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100%;
+}
+
+@keyframes iconAnimation {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 5%;
+	}
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes iconAnimationShowModal {
+	0% {
+		left: 80%;
+	}
+	50% {
+		left: 85%;
+	}
+	100% {
+		left: 80%;
+	}
+}
