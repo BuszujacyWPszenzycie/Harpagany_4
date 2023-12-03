@@ -271,6 +271,8 @@ body {
 
 		&-h3 {
 			color: $orange;
+			text-wrap: wrap;
+			text-align: center;
 		}
 
 		&--teams {
@@ -290,6 +292,58 @@ body {
 			padding: 2rem;
 		}
 	}
+}
+
+// CONTACT
+
+.contact {
+	width: 100vw;
+	height: 50vh;
+	background-color: $grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&-icon {
+			font-size: 8rem;
+		}
+
+		&-p {
+			font-size: 8rem;
+		}
+
+		&-span {
+			color: $orange;
+		}
+	}
+
+	&__icon {
+		font-size: 8rem;
+		color: $orange;
+		padding: 5rem;
+		cursor: pointer;
+		transition: color 0.4s;
+		&:hover {
+			color: $orange-hover;
+		}
+	}
+}
+
+// FOOTER
+
+.footer {
+	width: 100vw;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
 }
 
 // ANIMATIONS
@@ -318,17 +372,17 @@ body {
 	}
 }
 
-// @keyframes pictureAnimation {
-// 	0% {
-// 		transform: translate(-100%);
-// 		opacity: 0;
-// 	}
-// 	50% {
-// 		transform: translate(0);
-// 		opacity: 1;
-// 	}
-// 	100% {
-// 		transform: translate(100%);
-// 		opacity: 0;
-// 	}
-// }
+@keyframes pictureAnimation {
+	0% {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+	50% {
+		transform: translate(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(100%);
+		opacity: 0;
+	}
+}

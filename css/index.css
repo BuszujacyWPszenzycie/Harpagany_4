@@ -236,6 +236,8 @@ body {
 }
 .league__result-h3 {
   color: #f67704;
+  text-wrap: wrap;
+  text-align: center;
 }
 .league__result--teams {
   display: flex;
@@ -250,6 +252,49 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+}
+
+.contact {
+  width: 100vw;
+  height: 50vh;
+  background-color: #7d7c7c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__title-icon {
+  font-size: 8rem;
+}
+.contact__title-p {
+  font-size: 8rem;
+}
+.contact__title-span {
+  color: #f67704;
+}
+.contact__icon {
+  font-size: 8rem;
+  color: #f67704;
+  padding: 5rem;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.contact__icon:hover {
+  color: #f9b572;
+}
+
+.footer {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
 }
 
 @keyframes iconAnimation {
@@ -272,5 +317,19 @@ body {
   }
   100% {
     left: 80%;
+  }
+}
+@keyframes pictureAnimation {
+  0% {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%);
+    opacity: 0;
   }
 }/*# sourceMappingURL=index.css.map */
