@@ -32,7 +32,7 @@ body {
 .header__h1 {
   font-size: 8rem;
 }
-.header__h3 {
+.header__h2 {
   font-size: 4rem;
 }
 .header__span {
@@ -66,6 +66,9 @@ body {
   color: #7d7c7c;
 }
 
+.box {
+  width: 100%;
+}
 .box__left {
   width: 50%;
   height: 100%;
@@ -94,7 +97,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(-103%);
+  transform: translateX(-100%);
   background-color: rgba(0, 0, 0, 0.95);
   transition: transform 0.4s;
   width: 100%;
@@ -142,7 +145,48 @@ body {
 .about {
   width: 100vw;
   height: 100vh;
-  max-width: 100%;
+  display: flex;
+}
+.about__left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.about__right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.about__img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  animation-name: pictureAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: transform 2s;
+}
+.about__h3 {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  padding: 1.5rem;
+}
+.about__span {
+  color: #f67704;
+}
+.about__p {
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+.about__a {
+  text-decoration: none;
+  color: #f67704;
 }
 
 @keyframes iconAnimation {

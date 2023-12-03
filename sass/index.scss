@@ -37,7 +37,7 @@ body {
 		font-size: 8rem;
 	}
 
-	&__h3 {
+	&__h2 {
 		font-size: 4rem;
 	}
 
@@ -78,6 +78,7 @@ body {
 }
 
 .box {
+	width: 100%;
 	&__left {
 		width: 50%;
 		height: 100%;
@@ -110,7 +111,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	transform: translateX(-103%);
+	transform: translateX(-100%);
 	background-color: rgba(0, 0, 0, 0.95);
 	transition: transform 0.4s;
 	width: 100%;
@@ -161,8 +162,60 @@ body {
 .about {
 	width: 100vw;
 	height: 100vh;
-	max-width: 100%;
+	display: flex;
+
+	&__left {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	&__right {
+		width: 50%;
+		height: 100vh;
+		display: flex;
+
+		align-items: flex-start;
+		flex-direction: column;
+		// background-color: $orange-hover;
+	}
+
+	&__img {
+		flex-shrink: 0;
+		min-width: 100%;
+		min-height: 100%;
+		animation-name: pictureAnimation;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		transition: transform 2s;
+	}
+
+	&__h3 {
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+		font-size: 3rem;
+		padding: 1.5rem;
+	}
+
+	&__span {
+		color: $orange;
+	}
+
+	&__p {
+		font-size: 2rem;
+		padding: 1.5rem;
+	}
+
+	&__a {
+		text-decoration: none;
+		color: $orange;
+	}
 }
+
+// ANIMATIONS
 
 @keyframes iconAnimation {
 	0% {
@@ -187,3 +240,18 @@ body {
 		left: 80%;
 	}
 }
+
+// @keyframes pictureAnimation {
+// 	0% {
+// 		transform: translate(-100%);
+// 		opacity: 0;
+// 	}
+// 	50% {
+// 		transform: translate(0);
+// 		opacity: 1;
+// 	}
+// 	100% {
+// 		transform: translate(100%);
+// 		opacity: 0;
+// 	}
+// }
