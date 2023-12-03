@@ -215,6 +215,83 @@ body {
 	}
 }
 
+// LEAGUE
+
+.league {
+	margin-top: 5rem;
+	width: 100vw;
+	height: 100%;
+	// background-color: $grey;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	&__wrapper {
+		margin: 5rem;
+		width: 1200px;
+		height: 300px;
+		display: flex;
+		align-items: center;
+
+		&--left {
+			justify-content: flex-start;
+		}
+
+		&--right {
+			justify-content: flex-end;
+		}
+	}
+
+	&__date {
+		height: 100%;
+		font-size: 4rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3rem;
+
+		&--left {
+			border-left: 1px solid $orange;
+		}
+
+		&--right {
+			border-right: 1px solid $orange;
+		}
+	}
+
+	&__result {
+		font-size: 1.8rem;
+		padding: 4rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $light-grey;
+		box-shadow: 8px 8px 24px 10px rgba(66, 68, 90, 0.2);
+		margin: 4rem;
+
+		&-h3 {
+			color: $orange;
+		}
+
+		&--teams {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 2rem;
+			// padding-right: 5rem;
+		}
+
+		&--points {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 2rem;
+		}
+	}
+}
+
 // ANIMATIONS
 
 @keyframes iconAnimation {
